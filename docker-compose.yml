@@ -1,0 +1,10 @@
+version: '3'
+services:
+  my_app:
+    image: ubuntu:latest
+    container_name: my_app_container
+    volumes:
+      - /home/rickduggan/prusa:/prusa
+      - /home/rickduggan/prusa/ff-creator-post-processor.py:/app/ff-creator-post-processor.py
+    command: bash -c "apt-get update && apt-get install -y python3 python3-pip && pip3 install Pillow && python3 /app/ff-creator-post-processor.py && tail -f /dev/null"
+
