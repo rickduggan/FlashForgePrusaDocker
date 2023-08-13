@@ -2,5 +2,8 @@
 
 cd base && docker-compose build && cd ..
 cd final && docker-compose build && cd 
-docker run -it --privileged final_prusa bash
+docker run -v /home/rickduggan/prusa:/prusa -it final_prusa
+
+then manually post process each item (for now)
+
 

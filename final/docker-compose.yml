@@ -6,9 +6,12 @@ services:
       dockerfile: Dockerfile
     container_name: prusa
     volumes:
-      # - /tmp/:/prusa
-      - /tmp/:/tmp/
-
+      #- /tmp/:/prusa
+      #- /tmp/:/prusa/tmp/
+      - /home/rickduggan/prusa:/prusa-test
+      #- /home/rickduggan/prusa:/prusa-test
+      #- ./prusa/tmp/:/tmp/
+      #- /home/rickduggan/prusa:/test
 
 
 
